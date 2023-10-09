@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="firstOpen()">
+<input type="button" value="Penjumlahan" onclick="Penjumlahan()">
+</body>
+
+<script>
+    function Penjumlahan() {
+        var a1 = Number(prompt("Masukan Angka Pertama : ",0))
+        var a2 = Number(prompt("Angka"+a1+"Mau Ditambahkan Dengan Angka Berapa ? ",0))
+        var result = a1 + a2
+
+        return document.writeln("Hasil Dari "+a1+ " + "+a2+" = "+result)
+    }
+    function firstOpen() {
+        alert("Tekan Tombol Untuk Penjumlahan")
+    }
+    </script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Pengolahan Nilai</h1>
+<form>
+    Nilai PW : <label for="nilaipw"></label><input type="text" name="nilaipw" id="nilaipw" /><br>
+    Nilai BDT : <label for="nilaibdt"></label><input type="text" name="nilaibdt" id="nilaibdt"><br>
+    Nilai ALGORITMA : <input type="text" name="nilaialgo" id="nilaialgo"/><br>
+    <input type="button" value="hitung" onclick="hitung()">
+</form>
+
+Rata-Rata : <div id = "nilairt"> </div>
+Keterangan : <div id = "ket"> </div>
+</body>
+
+<script>
+    function hitung() {
+        var nilaipw = document.getElementById("nilaipw").value
+        var nilaibdt = document.getElementById("nilaibdt").value
+        var nilaialgo = document.getElementById("nilaialgo").value
+
+        let nilairt = (nilaipw * 0.3) + (nilaibdt * 0.3) + (nilaialgo * 0.4);
+        document.getElementById("nilairt").innerText = String(nilairt);
+
+        if (nilairt >= 91 && nilairt <= 100){
+            document.getElementById("ket").innerText = "A"
+        }else if (nilairt >= 81 && nilairt <= 90){
+            document.getElementById("ket").innerText = "B"
+        }else if (nilairt >= 71 && nilairt <= 80){
+            document.getElementById("ket").innerText = "c"
+        }else if (nilairt >= 51 && nilairt <= 70){
+            document.getElementById("ket").innerText = "D"
+        }else if (nilairt >= 0 && nilairt <= 50){
+            document.getElementById("ket").innerText = "E"
+        }
+
+    }
+</script>
+</html>
